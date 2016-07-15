@@ -227,7 +227,7 @@ int grid[105][105];
 
 int main()
 {
-    freopen("input.txt", "r", stdin);
+    //freopen("input.txt", "r", stdin);
 
     int test;
     sc(test);
