@@ -1,0 +1,22 @@
+int LIS(int &n)
+{
+    for(int i=0;i<n;i++)
+        L[i]=1;
+    for(int i=0;i<n;i++)
+    {
+        for(int j=i+1;j<n;j++)
+        {
+            if(lis_seqence[i]<lis_seqence[j])
+            {
+                if(L[j]<L[i]+1)
+                L[j]=L[i]+1;
+            }
+        }
+    }
+    int maxLength=0;
+    for(int i=0;i<n;i++)
+        if(maxLength<L[i])
+            maxLength=L[i];
+    cout<<"maximum length is "<<maxLength<<endl;
+    return maxLength;
+}

@@ -1,0 +1,15 @@
+int find_sequence(int m,int n)
+{
+    if(m==0 || n==0) return 0;
+    if(A[m-1]==B[n-1])
+    {
+        v.push_back(A[m-1]);
+        find_sequence(m-1,n-1);
+    }
+    else if(lcs[m-1][n]>lcs[m][n-1])
+    {
+        find_sequence(m-1,n);
+    }
+    else
+        find_sequence(m,n-1);
+}

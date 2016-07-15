@@ -1,0 +1,16 @@
+import java.math.BigInteger;
+import java.util.Scanner;
+class Main {
+	
+	public static void main(String ar[]){
+		Scanner input = new Scanner(System.in);
+		BigInteger A,B;
+		int N;
+		N = input.nextInt();
+		while(N-->0){
+				A = input.nextBigInteger();
+				B = input.nextBigInteger();
+				System.out.println(A.subtract(B));
+			}
+		}
+}

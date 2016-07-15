@@ -1,0 +1,23 @@
+void LIS_find_sequence(int &maxLength,int &n)
+{
+    vector<int>v;
+    int i;
+    for(i=0;i<n;i++)
+        if(maxLength==L[i])
+            break;
+
+    v.push_back(lis_seqence[i]);
+    for(int j=i-1;j>=0;j--)
+    {
+        if((L[i]-L[j])==1 && lis_seqence[j]<lis_seqence[i])
+        {
+            v.push_back(lis_seqence[j]);
+            i=j;
+        }
+    }
+    cout<<"The lis sequence is "<<endl;
+    for(int i=v.size()-1;i>=0;i--)
+        cout<<v[i]<<ends;
+    cout<<endl;
+
+}

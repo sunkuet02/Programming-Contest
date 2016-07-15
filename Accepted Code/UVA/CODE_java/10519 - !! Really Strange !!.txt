@@ -1,0 +1,22 @@
+import java.math.BigInteger;
+import java.util.Scanner;
+class Main {
+	
+	public static void main(String ar[]){
+		Scanner input = new Scanner(System.in);
+		BigInteger A,B ;
+		while(input.hasNext()){
+			A = input.nextBigInteger();
+			B = BigInteger.ZERO;
+			if(A.compareTo(B)==0){
+				System.out.println("1");
+				continue;
+			}
+			B = A.multiply(A) ;
+			B = B.subtract(A);
+			A = B.add(BigInteger.ONE);
+			A = A.add(BigInteger.ONE);
+			System.out.println(A);
+		}
+	}
+}

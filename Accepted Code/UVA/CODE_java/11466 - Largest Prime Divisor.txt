@@ -1,0 +1,24 @@
+import java.math.BigInteger;
+import java.util.Scanner;
+public class Main {
+	
+	public static void main(String args[]){
+		Scanner input = new Scanner(System.in);
+		BigInteger A,B,C;
+		int n,k;			
+			for(int i =0;i<=204;i++)
+			{
+				A = BigInteger.ONE;
+				System.out.print(A);
+				C = BigInteger.valueOf(i);
+				for(int j = 0;j<=i;j++)
+				{
+					if(j!=0)
+						System.out.print(" "+A);
+					B = BigInteger.valueOf(j);
+					A = A.multiply(C.subtract(B)).divide(B.add(BigInteger.ONE));
+				}
+				System.out.println();
+			}
+	}
+}

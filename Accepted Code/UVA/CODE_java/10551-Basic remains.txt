@@ -1,0 +1,16 @@
+import java.util.Scanner;
+import java.math.BigInteger;
+class Math{
+	public static void main(String args[]){
+		Scanner s=new Scanner (System.in);
+		while(true){
+			int n=s.nextInt();
+			if(n==0) break;
+			String p_str=s.next();
+			BigInteger p=new BigInteger(p_str,n);
+			String q_str=s.next();
+			BigInteger q=new BigInteger(q_str,n);
+			System.out.println((p.mod(q).toString(n)));
+		}
+	}
+}

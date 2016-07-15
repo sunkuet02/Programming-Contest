@@ -1,0 +1,15 @@
+import java.util.Scanner;
+import java.math.BigInteger;
+class Main{
+	public static void main(String args[]){
+		Scanner s=new Scanner (System.in);
+		int N=s.nextInt();
+		while(N-- >0){
+			BigInteger p = s.nextBigInteger();
+			String ch=s.next();
+			BigInteger q=s.nextBigInteger();
+			BigInteger gcd_pq=p.gcd(q);
+			System.out.println(p.divide(gcd_pq)+" / "+q.divide(gcd_pq));
+		}
+	}
+}

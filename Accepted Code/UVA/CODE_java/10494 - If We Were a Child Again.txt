@@ -1,0 +1,26 @@
+import java.math.BigInteger;
+import java.util.Scanner;
+public class Main {
+	
+	public static void main(String args[]){
+		Scanner input = new Scanner(System.in);
+		BigInteger A,B ;
+		int t;
+			while(input.hasNext()){
+				A =input.nextBigInteger();
+				char ch;
+
+				String tBuffer = input.next();
+				char oneChar = tBuffer.charAt(0);
+				B = input.nextBigInteger();
+				if(oneChar == '/'){
+					System.out.println(A.divide(B));
+				}
+				else if(oneChar =='%'){
+					System.out.println(A.mod(B));
+				}
+				
+			
+			}
+	}
+}

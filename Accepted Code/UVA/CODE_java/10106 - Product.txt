@@ -1,0 +1,15 @@
+import java.math.BigInteger;
+import java.util.Scanner;
+class Main {
+	
+	public static void main(String ar[]){
+		Scanner input = new Scanner(System.in);
+		BigInteger A,B;
+		while(input.hasNext()){
+			A = input.nextBigInteger();
+			B = input.nextBigInteger();
+			A = A.multiply(B);
+			System.out.println(A);
+		}
+	}
+}

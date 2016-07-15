@@ -1,0 +1,24 @@
+import java.math.BigInteger;
+import java.util.Scanner;
+
+class Main {
+	
+	public static void main(String ar[]){
+		Scanner input = new Scanner(System.in);
+		BigInteger sum,A,temp;
+		int N;
+		while(input.hasNext()){
+			sum = BigInteger.ZERO;
+			N = input.nextInt();
+			A = input.nextBigInteger();
+			temp = A;
+			for(int i=1;i<=N;i++){
+				BigInteger current = ( new BigInteger(String.valueOf(i)));
+				current = current.multiply(A);
+				sum= sum.add(current);
+				A = A.multiply(temp);
+			}
+			System.out.println(sum);
+		}
+	}
+}
